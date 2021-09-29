@@ -13,7 +13,7 @@ class homepage extends StatelessWidget {
               Container(
                 height: MediaQuery.of(context).size.height / 3.8,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration:const BoxDecoration(
                     color: Color(0xFF0244d0),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(20),
@@ -35,7 +35,7 @@ class homepage extends StatelessWidget {
                       "DASHBOARD ",
                       textAlign: TextAlign.center,
                       overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
+                      style:  TextStyle(
                           fontWeight: FontWeight.bold,
                           color: Colors.white,
                           fontSize: 24),
@@ -50,48 +50,54 @@ class homepage extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(20, 130, 20, 0),
-                child: Container(
-                  height: MediaQuery.of(context).size.height / 3.8,
-                  width: MediaQuery.of(context).size.width,
-                  decoration: BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Color(0XFFf0f0f0),
-                        offset: Offset(0.0, 1.0),
-                        blurRadius: 6.0,
-                      ),
-                    ],
-                    color: Color(0XFFffffff),
-                    borderRadius: BorderRadius.circular(20),
+                child: TextButton(
+                  onPressed: (){ Navigator.pushNamed(context, "/Profile");},
+                  child: Container(
+                    height: MediaQuery.of(context).size.height / 3.8,
+                    width: MediaQuery.of(context).size.width,
+                    decoration: BoxDecoration(
+                      boxShadow:const [
+                        BoxShadow(
+                          color: Color(0XFFf0f0f0),
+                          offset: Offset(0.0, 1.0),
+                          blurRadius: 6.0,
+                        ),
+                      ],
+                      color: const Color(0XFFffffff),
+                      borderRadius: BorderRadius.circular(20),
+                    ),
                   ),
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(160, 180, 0, 0),
-                child: Column(
-                  children: [
-                    CircleAvatar(
-                      radius: 30,
-                      backgroundImage: AssetImage('images/rash.jpg'),
-                    ),
-                    SizedBox(height: 15,),
-                    Text(
-                      "Rashida v",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black,
-                        fontSize: 18,
+                child: TextButton(
+                  onPressed:(){ Navigator.pushNamed(context, "/Profile");},
+                  child: Column(
+                    children:const [
+                      CircleAvatar(
+                        radius: 30,
+                        backgroundImage: AssetImage('images/rash.jpg'),
                       ),
-                    ),
-                    Text(
-                      "UG Third Year",
-                      style: TextStyle(
-                        fontWeight: FontWeight.normal,
-                        color: Colors.black54,
-                        fontSize: 15,
+                      SizedBox(height: 15,),
+                      Text(
+                        "Rashida v",
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black,
+                          fontSize: 18,
+                        ),
                       ),
-                    ),
-                  ],
+                      Text(
+                        "UG Third Year",
+                        style: TextStyle(
+                          fontWeight: FontWeight.normal,
+                          color: Colors.black54,
+                          fontSize: 15,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
               Padding(
@@ -139,7 +145,7 @@ class homepage extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const  Padding (
                 padding: const EdgeInsets.only(top: 10,left: 20),
                 child: Text(
                   "Teachers",
@@ -149,7 +155,7 @@ class homepage extends StatelessWidget {
               Container(
                   margin: EdgeInsets.symmetric(vertical: 20.0),
                   height: 50.0,
-                  child: new ListView(
+                  child:  ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       teacher(
@@ -188,4 +194,3 @@ class homepage extends StatelessWidget {
     );
   }
 }
-
