@@ -173,9 +173,7 @@ class homepage extends StatelessWidget {
                       teacher(
                         path: 'images/fa.jpg',
                       ),
-                      teacher(
-                        path: 'images/rash.jpg',
-                      ),
+
                       teacher(
                         path: 'images/rash.jpg',
                       ),
