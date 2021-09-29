@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'techer.dart';
+import 'card.dart';
 
 class homepage extends StatelessWidget {
   @override
@@ -97,80 +99,15 @@ class homepage extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Container(
-                          height: MediaQuery.of(context).size.height / 5.5,
-                          width: MediaQuery.of(context).size.width / 2.4,
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0XFFf0f0f0),
-                                offset: Offset(0.0, 1.0),
-                                blurRadius: 6.0,
-                              ),
-                            ],
-                            color: Color(0XFFffffff),
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(top: 50),
-                                child: CircleAvatar(
-                                  radius: 30,
-                                  backgroundColor: Color(0XFFd7dee9),
-                                  child: CircleAvatar(
-                                    backgroundImage:
-                                        AssetImage('images/syllubus.png'),
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "Syllubus",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.normal,
-                                  color: Colors.black54,
-                                  fontSize: 15,
-                                ),
-                              ),
-                            ],
-                          ),
+                        contain(
+                          path1: 'images/syllubus.png',
+                          path2: 'syllubus',
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 25),
-                          child: Container(
-                            height: MediaQuery.of(context).size.height / 5.5,
-                            width: MediaQuery.of(context).size.width / 2.4,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0XFFf0f0f0),
-                                  offset: Offset(0.0, 1.0),
-                                  blurRadius: 6.0,
-                                ),
-                              ],
-                              color: Color(0XFFffffff),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 50),
-                                  child: CircleAvatar(
-                                    backgroundColor: Color(0XFFd7dee9),
-                                    backgroundImage:
-                                        AssetImage('images/att.png'),
-                                  ),
-                                ),
-                                Text(
-                                  "Attendance",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    color: Colors.black54,
-                                    fontSize: 15,
-                                  ),
-                                ),
-                              ],
-                            ),
+                          child: contain(
+                            path1: 'images/att.png',
+                            path2: 'Attandence',
                           ),
                         ),
                       ],
@@ -179,77 +116,15 @@ class homepage extends StatelessWidget {
                       padding: const EdgeInsets.only(top: 15),
                       child: Row(
                         children: [
-                          Container(
-                            height: MediaQuery.of(context).size.height / 5.5,
-                            width: MediaQuery.of(context).size.width / 2.4,
-                            decoration: BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Color(0XFFf0f0f0),
-                                  offset: Offset(0.0, 1.0),
-                                  blurRadius: 6.0,
-                                ),
-                              ],
-                              color: Color(0XFFffffff),
-                              borderRadius: BorderRadius.circular(20),
-                            ),
-                            child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 50),
-                                  child: CircleAvatar(
-                                    backgroundColor: Color(0XFFd7dee9),
-                                    backgroundImage:
-                                        AssetImage('images/hom.png'),
-                                  ),
-                                ),
-                                Text(
-                                  "Home Work",
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.normal,
-                                    color: Colors.black54,
-                                    fontSize: 15,
-                                  ),
-                                ),
-                              ],
-                            ),
+                          contain(
+                            path1: 'images/hom.png',
+                            path2: 'Homework',
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 25),
-                            child: Container(
-                              height: MediaQuery.of(context).size.height / 5.5,
-                              width: MediaQuery.of(context).size.width / 2.4,
-                              decoration: BoxDecoration(
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: Color(0XFFf0f0f0),
-                                    offset: Offset(0.0, 1.0),
-                                    blurRadius: 6.0,
-                                  ),
-                                ],
-                                color: Color(0XFFffffff),
-                                borderRadius: BorderRadius.circular(20),
-                              ),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 50),
-                                    child: CircleAvatar(
-                                      backgroundColor: Color(0XFFd7dee9),
-                                      backgroundImage:
-                                          AssetImage('images/result.jpg'),
-                                    ),
-                                  ),
-                                  Text(
-                                    "Results",
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.normal,
-                                      color: Colors.black54,
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                ],
-                              ),
+                            child: contain(
+                              path1: 'images/result.png',
+                              path2: 'Result',
                             ),
                           ),
                         ],
@@ -260,88 +135,50 @@ class homepage extends StatelessWidget {
               ),
             ],
           ),
-          
-          Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Text("Teachers"),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 10,left: 20),
+                child: Text(
+                  "Teachers",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
                 ),
-                Container(
-                    margin: EdgeInsets.symmetric(vertical: 20.0),
-                    height: 50.0,
-                    child: new ListView(
-                      scrollDirection: Axis.horizontal,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(6, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.deepPurple,
-                            ),
-                            width: 50,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.pinkAccent,
-                            ),
-                            width: 50.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.blue,
-                            ),
-                            width: 50.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.green,
-                            ),
-                            width: 50.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.yellow,
-                            ),
-                            width: 50.0,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(0, 0, 10, 3),
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              color: Colors.orange,
-                            ),
-                            width: 50.0,
-                          ),
-                        ),
-                      ],
-                    )),
-              ],
-            ),
+              ),
+              Container(
+                  margin: EdgeInsets.symmetric(vertical: 20.0),
+                  height: 50.0,
+                  child: new ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: <Widget>[
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                      teacher(
+                        path: 'images/rash.jpg',
+                      ),
+                    ],
+                  )),
+            ],
           ),
         ],
       ),
     );
   }
 }
+
