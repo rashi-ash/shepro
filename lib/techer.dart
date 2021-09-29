@@ -12,7 +12,8 @@ class teacher extends StatelessWidget {
             borderRadius: BorderRadius.circular(8),
             // color: Colors.deepPurple,
             image: DecorationImage(
-                image: AssetImage(path)
+                image: AssetImage(path),
+                    fit: BoxFit.cover
             )
         ),
         width: 50,

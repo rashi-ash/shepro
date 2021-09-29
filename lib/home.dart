@@ -74,6 +74,7 @@ class homepage extends StatelessWidget {
                       radius: 30,
                       backgroundImage: AssetImage('images/rash.jpg'),
                     ),
+                    SizedBox(height: 15,),
                     Text(
                       "Rashida v",
                       style: TextStyle(
@@ -83,7 +84,7 @@ class homepage extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "Flutter Devoloper",
+                      "UG Third Year",
                       style: TextStyle(
                         fontWeight: FontWeight.normal,
                         color: Colors.black54,
@@ -123,7 +124,7 @@ class homepage extends StatelessWidget {
                           Padding(
                             padding: const EdgeInsets.only(left: 25),
                             child: contain(
-                              path1: 'images/result.png',
+                              path1: 'images/result.jpg',
                               path2: 'Result',
                             ),
                           ),
@@ -152,7 +153,19 @@ class homepage extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[
                       teacher(
-                        path: 'images/rash.jpg',
+                        path: 'images/fida.jpeg',
+                      ),
+                      teacher(
+                        path: 'images/ashi.jpeg',
+                      ),
+                      teacher(
+                        path: 'images/maji.jpeg',
+                      ),
+                      teacher(
+                        path: 'images/fida.jpeg',
+                      ),
+                      teacher(
+                        path: 'images/fa.jpg',
                       ),
                       teacher(
                         path: 'images/rash.jpg',
@@ -161,16 +174,10 @@ class homepage extends StatelessWidget {
                         path: 'images/rash.jpg',
                       ),
                       teacher(
-                        path: 'images/rash.jpg',
+                        path: 'images/fa.jpg',
                       ),
                       teacher(
-                        path: 'images/rash.jpg',
-                      ),
-                      teacher(
-                        path: 'images/rash.jpg',
-                      ),
-                      teacher(
-                        path: 'images/rash.jpg',
+                        path: 'images/ashi.jpeg',
                       ),
                     ],
                   )),
